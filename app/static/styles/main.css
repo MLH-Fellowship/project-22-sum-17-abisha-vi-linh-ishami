@@ -1,97 +1,146 @@
-p, h1, h2, h3, h4, h5, h6, button {
-    font-family: "Roboto", serif;
+.max-width {
+    padding: 20px 50px;
+    background-color: #222629;
 }
 
-body {
-    background-color: #f5f5f9;
-    background-size: cover;
-    width: auto; 
-    overflow-x: hidden;
-    font-family: "Roboto", serif;
-    margin: 0px;
+* {
+    font-family: 'DM Sans', sans-serif;
 }
 
-.nav-bar {
+nav {
+    background-color: antiquewhite;
+    position: fixed;
+    top: 0;
+    right: 0;
     width: 100%;
-    display: inline-block;
-    background-color: #1C539F;
-    font-family: "Roboto", serif;
-    font-weight: 700 !important;
-    padding-top: 10px;
+    padding: 20px;
+    padding-right: 30px;
+    background-color: #222629;
 }
 
-.nav-content .logo-touch-target {
-    display: inline-flex;
-    height: 60%;
-    width: 350px;
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
-.nav-content .nav-logo {
-    height: 60px;
-    margin: auto;
+ul {
+    list-style: none;
+    color: #fff;
 }
 
-.nav-logo {
+ul a {
+    text-decoration: none;
+    color: #A1DAEC;
+    text-transform: uppercase;
+}
+
+ul a:hover {
+    color: #4F8495;
+}
+
+.home {
+    color: #fff;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 10vw;
 }
 
-.nav-logo img {
-    width: 200px;
+.home .left h1 {
+    font-size: 3rem;
 }
 
-.nav-content nav {
-    display: block;
-    width: 100%;
-    text-align: right;
-    padding-top: 0px;
-    padding-right: 0px;
+.home .left {
+    flex: 3;
 }
 
-.profile {
-    background-color: #1d539f !important;
-    text-align: center;
-    height: 320px;
-    margin-bottom: 50px;
+.home .left .tag:hover{
+    color: #A1DAEC;
+    font-size: 110%;
+    transition: 0.3s ease-out;
 }
 
-.profile h1 {
-        font-size: 50px;
-        font-weight: 700;
-        color: white;
+.home .right {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
 }
 
-.profile img {
-        border-radius: 50%;
-        max-width: 100%;
-        max-height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;        
-        padding: 20px;
+.home .left p {
+    color: #6B6E70;
+    font-size: 1.3rem;
 }
 
-.profile .profile-picture {
-    margin-bottom: 30px;
-    height: 200px;
+.home .right img {
+    border-radius: 3%;
+    max-width: 500px;
 }
 
-.banner {
-    padding: 20px 0px 50px 0px;
-    height: 150px;
-    background-color: #1d539f;
+.home .right ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    font-size: 30px;
+    margin-top: 15px;
 }
 
-.banner .logo {
-    max-width:180px;
-    max-height:60px;
-    width: auto;
-    height: auto;
+.projs h1 {
+    text-transform: uppercase;
+    color: #fff;
 }
 
-.banner .title {
-    color: white;
-    font-size: 50px;
-    font-weight: 700;
+.projs {
+    height: 100vh;
 }
+
+.proj-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.proj-card {
+    color: #4F8495;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.proj-card img {
+    border-radius: 5%;
+}
+
+.proj-card .proj-descrip {
+    color: #6B6E70;
+}
+
+.proj-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 10px;
+}
+
+.proj-buttons button {
+    background-color: #4F8495;
+    color: #fff;
+    border-radius: 5%;
+    border-style: none;
+    padding: 5px 10px;
+}
+
+.proj-buttons button:hover {
+    cursor: pointer;
+    background-color: #A1DAEC;
+    color: #000;
+}
+
+  
