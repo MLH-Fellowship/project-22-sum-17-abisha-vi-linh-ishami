@@ -36,7 +36,7 @@
       <a href=""><li>Experience</li></a>
       <a href="#projs"><li>Projects</li></a>
       <a href="#about"><li>About Me</li></a>
-      <a href=""><li>Contact</li></a>
+      <a href="#contact"><li>Contact</li></a>
     </ul>
   </nav>
 
@@ -122,37 +122,34 @@
 
     <!--Experiences -->
     <div class="experience">
-      <h1> Experience </h1>
+      <h1>Experience</h1>
       <div class="exp-cards">
         {% for exp in experiences %}
         <div class="exp-card">
-          <h2> {{ exp.name }} </h2>
+          <h2>{{ exp.name }}</h2>
           <ul>
             {% for pt in exp.descrip %}
             <li>{{ pt }}</li>
             {% endfor %}
           </ul>
-        </div> 
+        </div>
         {% endfor %}
       </div>
     </div>
 
-    
-    <!--Contacts -->
-    <div class="contacts">
-      <h1 class = "contact-title"> Contact </h1>
-      <div class = "Name"> 
-          <div class = "flex-container">
-              <div>1</div> 
-              <div></div> 
-          </div> 
-      </div> 
-
-        <div class = "flex-container-1">
-            <div class = "description-box">1</div>
-        </div> 
-      </div>
-  </div>
-    
-</body>
+    <!--Contact-->
+    <div id="contact" class="contact">
+      <h1>Contact</h1>
+      <form class="contact-form">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <textarea
+          id="message"
+          placeholder="Message"
+          required
+          rows="5"
+        ></textarea>
+      </form>
+    </div>
+  </body>
 </html>
