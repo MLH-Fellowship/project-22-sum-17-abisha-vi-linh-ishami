@@ -1,41 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta property="og:title" content="Personal Portfolio" />
+    <meta property="og:description" content="My Personal Portfolio" />
+    <meta property="og:url" content="{{ url }}" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+    <link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
+    <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
     <title>{{ title }}</title>
-</head>
+  </head>
 
-<body class="max-width">
+  <body class="max-width">
+    <!--Home Section-->
     <div class="home">
-        <div class="left">
-            <h1>First Last</h1>
-            <p><span class="tag">Developer</span> | <span class="tag">Fellow</span> | <span class="tag">Student</span></p>
-        </div>
-        <div class="right">
-            <img src="https://shotkit.com/wp-content/uploads/2020/07/woman-headshot-outdoors.jpg"/>
-            <ul class="links">
-                <a href="https://github.com/">
-                    <li><i class="fa-brands fa-linkedin"></i></li>
-                  </a>
-                <a href=""><li><i class="fa-brands fa-github"></i></li></a>
-                <a href=""><li><i class="fa-brands fa-twitter"></i></li></a>
-            </ul>
-        </div>
+      <div class="left">
+        <h1>First Last</h1>
+        <p>
+          <span class="tag">Developer</span> | <span class="tag">Fellow</span> |
+          <span class="tag">Student</span>
+        </p>
+      </div>
+      <div class="right">
+        <img
+          src="https://shotkit.com/wp-content/uploads/2020/07/woman-headshot-outdoors.jpg"
+        />
+        <ul class="links">
+          <a href="https://github.com/">
+            <li><i class="fa-brands fa-linkedin"></i></li>
+          </a>
+          <a href=""
+            ><li><i class="fa-brands fa-github"></i></li
+          ></a>
+          <a href=""
+            ><li><i class="fa-brands fa-twitter"></i></li
+          ></a>
+        </ul>
+      </div>
     </div>
-</body>
+
+    <!--Project Section-->
+    <div id="projs" class="projs">
+      <h1>Projects</h1>
+      <div class="proj-cards">
+        {% for proj in projects %}
+        <div class="proj-card">
+          <div class="proj-left">
+            <h2>{{ proj.name }}</h2>
+            <p class="proj-descrip">{{ proj.descrip }}</p>
+          </div>
+          <div class="proj-right">
+            <img
+              src="https://i.pinimg.com/originals/2d/38/4a/2d384a99b7f36a636bb9ea81ba5d727f.jpg"
+              width="250"
+              height="250"
+            />
+            <div class="proj-buttons">
+              <a href="{{ proj.git }}"><button>GitHub</button></a>
+              <a href="{{ proj.demo }}"><button>Demo</button></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
 </html>
