@@ -244,6 +244,30 @@ ul a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px;
+  color: #fff;
+}
+
+.map h2 {
+  text-transform: uppercase;
+}
+
+.map img {
+  width: 60%;
+  margin: 10px;
+  border: #4f8495 6px solid;
+}
+
+.map img:hover {
+  width: 1.1;
+  opacity: 90%;
+}
+
 /* Experience */
 
 .exp-cards {
