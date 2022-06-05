@@ -68,6 +68,24 @@
       </div>
     </div>
 
+    <!--Experiences -->
+    <div id="experience" class="experience">
+      <h1>Experience</h1>
+      <a id="resume-pdf" href=".\static\img\software-engineer-resume-example.pdf" download="newfilename">Resume.pdf</a>
+      <div class="exp-cards">
+        {% for exp in experiences %}
+        <div class="exp-card">
+          <h2>{{ exp.name }}</h2>
+          <ul>
+            {% for pt in exp.descrip %}
+            <li>{{ pt }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
     <!--Project Section-->
     <div id="projs" class="projs">
       <h1>Projects</h1>
@@ -124,23 +142,7 @@
       <div class="map">
         <img src="../static/img/Screenshot 2022-06-04 163820.png" />
         <p>Where I've Been</p>
-      </div>
-    </div>
-
-    <!--Experiences -->
-    <div id="experience" class="experience">
-      <h1>Experience</h1>
-      <div class="exp-cards">
-        {% for exp in experiences %}
-        <div class="exp-card">
-          <h2>{{ exp.name }}</h2>
-          <ul>
-            {% for pt in exp.descrip %}
-            <li>{{ pt }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endfor %}
+        
       </div>
     </div>
 

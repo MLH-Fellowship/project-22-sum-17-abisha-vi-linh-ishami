@@ -43,13 +43,16 @@ def index():
         Proj("Proj 2", "This is my proj 2!!",
              "https://github.com/", "https://github.com/"),
         Proj("Proj 3", "Description of my proj 3",
+             "https://github.com/", "https://github.com/"),
+        Proj("Proj 4", "Description of my proj 4",
              "https://github.com/", "https://github.com/")
     ]
 
     exps = [
         Exp("Experience 1", ["point 1", "point 2", "point 3"]),
         Exp("Experience 2", ["point 1", "point 2", "point 3"]),
-        Exp("Experience 3", ["point 1", "point 2", "point 3"])
+        Exp("Experience 3", ["point 1", "point 2", "point 3"]),
+        Exp("Experience 4", ["point 1", "point 2", "point 3"])
     ]
 
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), projects=projs, polaroids=pols, experiences=exps)
