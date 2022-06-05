@@ -98,7 +98,10 @@
     <div id="about" class="about-section">
       <h1>About Me</h1>
       <p>My Interests: Blockchain, Machine Learning, DevOps</p>
-      <p>My <a href="{{ url_for('hobbies') }}">Hobbies</a>: Swimming, Hiking, Traveling</p>
+      <p>
+        My <a href="{{ url_for('hobbies') }}">Hobbies</a>: Swimming, Hiking,
+        Traveling
+      </p>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for pol in polaroids %}
         <div class="polaroid">
@@ -149,6 +152,7 @@
           required
           rows="5"
         ></textarea>
+        <button type="submit" className="contact-submit">submit</button>
       </form>
     </div>
   </body>

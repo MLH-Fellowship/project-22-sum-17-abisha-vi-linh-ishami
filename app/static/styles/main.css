@@ -92,6 +92,7 @@ ul a:hover {
 .home .right img {
   border-radius: 3%;
   max-width: 500px;
+  border:#4f8495 3px solid;
 }
 
 .home .right ul {
@@ -302,4 +303,18 @@ textarea {
 .contact-form input::placeholder,
 textarea::placeholder {
   color: #4f8495;
+}
+
+.contact-form button {
+  border: none;
+  background-color: #4f8495;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 2px;
+}
+
+.contact-form button:hover {
+  cursor: pointer;
+  background-color: #a1daec;
+  color: #000;
 }
