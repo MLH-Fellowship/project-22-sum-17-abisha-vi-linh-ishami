@@ -286,3 +286,76 @@ ul a:hover {
     text-align: left;
     color: white;
     }
+
+    /*Contacts Section */ 
+    .contact-title { 
+        color: white; 
+        font-family: -apple-system, BlindMacSystemFont, sans-serif; 
+        padding: 2px; 
+        font-size: 70px; 
+        }
+        
+        .name-field { 
+        border-radius: 0px; 
+        background: #73AD21; 
+        pading: 20px; 
+        width: 200px;
+        height: 150px; 
+        }
+        
+        .name-title { 
+        color: white; 
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+        text-align: center; 
+        }
+        
+        .email-title {
+        color: white; 
+        font-family: apple-system, BlinkMacSystemFont, sans-serif; 
+        text-align: center; 
+        }
+        
+        .flex-container { 
+        display: flex; 
+        justify-content: center; 
+        background-color: rgb(34, 38, 41); 
+        }
+        
+        .flex-container > div { 
+        background-color: #D9D9D9; 
+        width: 400px; 
+        margin: 10px; 
+        text-align: center; 
+        line-height: 50px; 
+        font-size: 30px; 
+        color: #D9D9D9; 
+        
+        }
+        
+        .flex-container-1 { 
+        display: flex; 
+        justify-content: center; 
+        background-color: rgb(34, 38, 41); 
+        }
+        
+        .flex-container-1 > div { 
+        background-color: #D9D9D9; 
+        width: 400px; 
+        margin: 10px; 
+        text-align: center; 
+        line-height: 50px; 
+        font-size: 30px; 
+        color: #D9D9D9; 
+        
+        }
+        
+        .description-box { 
+        border-radius: 0px; 
+        background: #D9D9D9; 
+        padding: 20px; 
+        width: 200px; 
+        height: 200px; 
+        position: relative; 
+        top: 20px; 
+        
+        }
