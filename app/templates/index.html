@@ -29,6 +29,17 @@
     <title>{{ title }}</title>
   </head>
 
+  <!--Nav-->
+  <nav>
+    <ul class="nav-menu">
+      <a href=""><li>Home</li></a>
+      <a href=""><li>Experience</li></a>
+      <a href="#projs"><li>Projects</li></a>
+      <a href="#about"><li>About Me</li></a>
+      <a href=""><li>Contact</li></a>
+    </ul>
+  </nav>
+
   <body class="max-width">
     <!--Home Section-->
     <div class="home">
@@ -84,20 +95,29 @@
     </div>
 
     <!--About Me Section-->
-    <div class="about-section">
+    <div id="about" class="about-section">
       <h1>About Me</h1>
       <p>My Interests: Blockchain, Machine Learning, DevOps</p>
       <p>My Hobbies: Swimming, Hicking, Traveling</p>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for pol in polaroids %}
-          <div class="polaroid">
-            <a class="caption" href="#" style="font-size: 1px" title= "{{ pol.caption }}">
-              <img height="250" src="{{ pol.pic }}" alt="Santorini" title="Santorini" />
-            </a>
-          </div>
+        <div class="polaroid">
+          <a
+            class="caption"
+            href="#"
+            style="font-size: 1px"
+            title="{{ pol.caption }}"
+          >
+            <img
+              height="250"
+              src="{{ pol.pic }}"
+              alt="Santorini"
+              title="Santorini"
+            />
+          </a>
+        </div>
         {% endfor %}
       </div>
     </div>
-    
   </body>
 </html>
