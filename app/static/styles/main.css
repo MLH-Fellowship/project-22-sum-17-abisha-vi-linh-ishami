@@ -2,7 +2,7 @@ body {
   padding-top: 80px;
 }
 
-#exp {
+#experience {
   margin-top: -80px;
   padding-top: 80px;
 }
@@ -17,7 +17,7 @@ body {
   padding-top: 80px;
 }
 
-#exp, #projs, #about, #contact   {
+#experience, #projs, #about, #contact   {
   height:100vh;
 }
 
@@ -139,10 +139,9 @@ ul a:hover {
 }
 
 .proj-card {
-  height: 250px;
   color: #4f8495;
   display: flex;
-  padding: 20px;
+  padding: 10px;
   justify-content: space-between;
 }
 
@@ -271,6 +270,30 @@ ul a:hover {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px;
+  color: #fff;
+}
+
+.map h2 {
+  text-transform: uppercase;
+}
+
+.map img {
+  width: 60%;
+  margin: 10px;
+  border: #4f8495 6px solid;
+}
+
+.map img:hover {
+  width: 1.1;
+  opacity: 90%;
 }
 
 /* Experience */

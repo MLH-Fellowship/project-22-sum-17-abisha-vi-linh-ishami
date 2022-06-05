@@ -33,7 +33,7 @@
   <nav>
     <ul class="nav-menu">
       <a href=""><li>Home</li></a>
-      <a href="#exp"><li>Experience</li></a>
+      <a href="#experience"><li>Experience</li></a>
       <a href="#projs"><li>Projects</li></a>
       <a href="#about"><li>About Me</li></a>
       <a href="#contact"><li>Contact</li></a>
@@ -69,7 +69,7 @@
     </div>
 
     <!--Experiences -->
-    <div id="exp" class="experience">
+    <div id="experience" class="experience">
       <h1>Experience</h1>
       <a id="resume-pdf" href=".\static\img\software-engineer-resume-example.pdf" download="newfilename">Resume.pdf</a>
       <div class="exp-cards">
@@ -117,7 +117,7 @@
       <h1>About Me</h1>
       <p>My Interests: Blockchain, Machine Learning, DevOps</p>
       <p>
-        My <a href="{{ url_for('hobbies') }}" style="text-decoration: underline">Hobbies</a>: Swimming, Hiking,
+        My <a href="{{ url_for('hobbies') }}">Hobbies</a>: Swimming, Hiking,
         Traveling
       </p>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -138,6 +138,10 @@
           </a>
         </div>
         {% endfor %}
+      </div>
+      <div class="map">
+        <img src="../static/img/Screenshot 2022-06-04 163820.png" />
+        <p>Where I've Been</p>
       </div>
     </div>
 
