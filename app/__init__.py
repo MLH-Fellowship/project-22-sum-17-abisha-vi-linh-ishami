@@ -19,7 +19,6 @@ class Polaroid:
         self.caption = caption
         self.pic = pic
 
-
 @app.route('/')
 def index():
 
