@@ -1,3 +1,22 @@
+body {
+  padding-top: 80px;
+}
+
+#exp {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+#about {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+#projs {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
 .max-width {
   padding: 20px 50px;
   background-color: #222629;
