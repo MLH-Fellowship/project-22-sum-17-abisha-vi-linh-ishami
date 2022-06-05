@@ -33,7 +33,7 @@
   <nav>
     <ul class="nav-menu">
       <a href=""><li>Home</li></a>
-      <a href=""><li>Experience</li></a>
+      <a href="#experience"><li>Experience</li></a>
       <a href="#projs"><li>Projects</li></a>
       <a href="#about"><li>About Me</li></a>
       <a href="#contact"><li>Contact</li></a>
@@ -121,10 +121,14 @@
         </div>
         {% endfor %}
       </div>
+      <div class="map">
+        <img src="../static/img/Screenshot 2022-06-04 163820.png" />
+        <p>Where I've Been</p>
+      </div>
     </div>
 
     <!--Experiences -->
-    <div class="experience">
+    <div id="experience" class="experience">
       <h1>Experience</h1>
       <div class="exp-cards">
         {% for exp in experiences %}
