@@ -238,3 +238,51 @@ ul a:hover {
     -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
   }  
+
+
+  /* Setting Style of the title for Experience Section */
+.exp-title {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 2px;
+    font-size: 70px;
+    }
+    
+    .exp-1 {
+    border-radius: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: rgb(79, 132, 149);
+    width: 30%;
+    height: 200px;  
+    padding: 20px;
+    margin-left: 50px;
+    text-align: left;
+    color: white;  
+    }
+    
+    .exp-3 {
+    border-radius: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: rgb(79, 132, 149);
+    width: 30%;
+    height: 200px;
+    padding: 20px;
+    margin-right: 50px;
+    text-align: left;
+    position: right;
+    color: white;
+    position: relative;
+    float: right;
+    }
+    
+    .exp-2 {
+    border-radius: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: rgb(79, 132, 149);
+    width: 30%;
+    height: 200px;
+    padding: 20px;
+    margin-left: 50px;
+    text-align: left;
+    color: white;
+    }
