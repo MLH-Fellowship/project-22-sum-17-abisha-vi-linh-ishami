@@ -29,9 +29,9 @@ def index():
     ]
 
     pols = [ 
-        Polaroid("Caption of polaroid 1", "app\static\img\R.jpg"), 
-        Polaroid("Caption of polaroid 2", "app\static\img\R.jpg"), 
-        Polaroid("Caption of polaroid 3", "app\static\img\Screenshot 2022-06-04 163820.png")
+        Polaroid("Caption of polaroid 1", ".\static\img\R.jpg"), 
+        Polaroid("Caption of polaroid 2", ".\static\img\R.jpg"), 
+        Polaroid("Caption of polaroid 3", ".\static\img\Screenshot 2022-06-04 163820.png")
     ]
 
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), projects=projs, polaroids=pols)
