@@ -82,5 +82,22 @@
         {% endfor %}
       </div>
     </div>
+
+    <!--About Me Section-->
+    <div class="about-section">
+      <h1>About Me</h1>
+      <p>My Interests: Blockchain, Machine Learning, DevOps</p>
+      <p>My Hobbies: Swimming, Hicking, Traveling</p>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for pol in polaroids %}
+          <div class="polaroid">
+            <a class="caption" href="#" style="font-size: 1px" title= "{{ pol.caption }}">
+              <img height="250" src="{{ pol.pic }}" alt="Santorini" title="Santorini" />
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    
   </body>
 </html>
