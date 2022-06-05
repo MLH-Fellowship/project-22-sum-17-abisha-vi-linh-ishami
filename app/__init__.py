@@ -19,6 +19,13 @@ class Polaroid:
         self.caption = caption
         self.pic = pic
 
+
+class Exp:
+    def __init__(self, name, descrip) -> None:
+        self.name = name
+        self.descrip = descrip
+
+
 @app.route('/')
 def index():
 
@@ -38,4 +45,10 @@ def index():
                  ".\static\img\Screenshot 2022-06-04 163820.png")
     ]
 
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), projects=projs, polaroids=pols)
+    exps = [
+        Exp("Experience 1", ["point 1", "point 2", "point 3"]),
+        Exp("Experience 2", ["point 1", "point 2", "point 3"]),
+        Exp("Experience 3", ["point 1", "point 2", "point 3"])
+    ]
+
+    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), projects=projs, polaroids=pols, experiences=exps)

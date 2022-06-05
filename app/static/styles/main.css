@@ -97,10 +97,6 @@ ul a:hover {
   margin-top: 15px;
 }
 
-.projs {
-  height: 100vh;
-}
-
 .proj-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -237,6 +233,7 @@ ul a:hover {
 }
 
 /* Experience */
+
 .exp-cards {
   display: flex;
   flex-wrap: wrap;

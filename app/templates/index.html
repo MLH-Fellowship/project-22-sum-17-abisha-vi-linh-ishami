@@ -124,32 +124,20 @@
     <div class="experience">
       <h1> Experience </h1>
       <div class="exp-cards">
+        {% for exp in experiences %}
         <div class="exp-card">
-          <h2> Experience 2 </h2>
+          <h2> {{ exp.name }} </h2>
           <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-            <li>Point 3</li>
+            {% for pt in exp.descrip %}
+            <li>{{ pt }}</li>
+            {% endfor %}
           </ul>
         </div> 
-        <div class="exp-card">
-          <h2> Experience 2 </h2>
-          <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-            <li>Point 3</li>
-          </ul>
-        </div> 
-        <div class="exp-card">
-          <h2> Experience 2 </h2>
-          <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-            <li>Point 3</li>
-          </ul>
-        </div> 
+        {% endfor %}
       </div>
     </div>
+
+    
     <!--Contacts -->
     <div class="contacts">
       <h1 class = "contact-title"> Contact </h1>
