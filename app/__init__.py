@@ -26,6 +26,14 @@ class Exp:
         self.descrip = descrip
 
 
+pols = [
+    Polaroid("Caption of polaroid 1", ".\static\img\R.jpg"),
+    Polaroid("Caption of polaroid 2", ".\static\img\R.jpg"),
+    Polaroid("Caption of polaroid 3",
+             ".\static\img\Screenshot 2022-06-04 163820.png")
+]
+
+
 @app.route('/')
 def index():
 
@@ -38,13 +46,6 @@ def index():
              "https://github.com/", "https://github.com/")
     ]
 
-    pols = [
-        Polaroid("Caption of polaroid 1", ".\static\img\R.jpg"),
-        Polaroid("Caption of polaroid 2", ".\static\img\R.jpg"),
-        Polaroid("Caption of polaroid 3",
-                 ".\static\img\Screenshot 2022-06-04 163820.png")
-    ]
-
     exps = [
         Exp("Experience 1", ["point 1", "point 2", "point 3"]),
         Exp("Experience 2", ["point 1", "point 2", "point 3"]),
@@ -52,3 +53,8 @@ def index():
     ]
 
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), projects=projs, polaroids=pols, experiences=exps)
+
+
+@app.route('/hobbies')
+def hobbies():
+    return render_template('hobbies.html', url=os.getenv("URL"), polaroids=pols)
