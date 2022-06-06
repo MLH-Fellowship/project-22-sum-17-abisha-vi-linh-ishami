@@ -1,5 +1,20 @@
 # Production Engineering - Week 1 - Portfolio Site
 
+### Introduction
+Here is our submission for the MLH Fellowship Orientation Hackathon (Summer 2022).
+
+### Description
+This project is a portfolio website using Flask. <br />
+We created the design using html and CSS, using Flask to incorporate dynamic elements such as the list of experiences, projects and "about yourself" facts. A contact page was also added at the bottom of the site.
+
+### Visuals
+
+
+
+### Technologies Used
+- Html, CSS
+-Python flask, jinja
+
 Welcome to the MLH Fellowship! During Week 1, you'll be working with Flask to build a portfolio site. This site will be the foundation for activities we do in future weeks so spend time this week making it your own and reflect your personality!
 
 ## Tasks
