@@ -1,53 +1,15 @@
 # Production Engineering - Week 1 - Portfolio Site
 
-### Introduction
-Here is our submission for the MLH Fellowship Orientation Hackathon (Summer 2022).
+A portfolio website that has sections to display basic information, experiences, education, hobbies, and contact info.
 
-### Description
-This project is a portfolio website using Flask. <br />
-We created the design using html and CSS, using Flask to incorporate dynamic elements such as the list of experiences, projects and "about yourself" facts. A contact page was also added at the bottom of the site.
+## Visuals
+<img width="500" alt="Screen Shot 2022-06-05 at 9 17 48 PM" src="https://user-images.githubusercontent.com/81380688/172093992-a66cdcca-c806-4b8e-977b-bce52c8cbd98.png">
 
-### Visuals
+<img width="500" alt="Screen Shot 2022-06-05 at 9 18 27 PM" src="https://user-images.githubusercontent.com/81380688/172094046-96e23942-8fc1-48fa-a2ae-16e8e8393705.png">
 
-
-
-### Technologies Used
-- Html, CSS
--Python flask, jinja
-
-Welcome to the MLH Fellowship! During Week 1, you'll be working with Flask to build a portfolio site. This site will be the foundation for activities we do in future weeks so spend time this week making it your own and reflect your personality!
-
-## Tasks
-
-Once you've got your portfolio downloaded and running using the instructions below, you should attempt to complete the following tasks.
-
-For each of these tasks, you should create an [Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) and work on them in a new [branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches). When the task has been completed, you should open a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and get another fellow in your pod to give you feedback before merging it in.
-
-*Note: Make sure to include a link to the Issue you're working on inside of your Pull Request so your reviewer knows what you're working on!*
-
-### GitHub Tasks
-- [x] Create Issues for each task below
-- [x] Work on each task in a new branch
-- [x] Open a Pull Request when a task is finished to get feedback
-
-### Portfolio Tasks
-- [x] Add a photo of yourself to the website
-- [x] Add an "About youself" section to the website.
-- [x] Add your previous work experiences
-- [x] Add your hobbies (including images)
-- [x] Add your current/previous education
-- [x] Add a map of all the cool locations/countries you visited
-
-### Flask Tasks
-- [x] Get your Flask app running locally on your machine using the instructions below.
-- [x] Add a template for adding multiple work experiences/education/hobbies using [Jinja](https://jinja.palletsprojects.com/en/3.0.x/api/#basics)
-- [x] Create a new page to display hobbies.
-- [x] Add a menu bar that dynamically displays other pages in the app
-
-
-## Getting Started
-
-You need to do all your work here.
+## Technologies Used
+- HTML & CSS for the frontend
+- Python, Flask, & Jinja to make use of reusable templates and route to different URLs
 
 ## Installation
 
@@ -84,8 +46,6 @@ You should get a response like this in the terminal:
 ```
 
 You'll now be able to access the website at `localhost:5000` or `127.0.0.1:5000` in the browser! 
-
-*Note: The portfolio site will only work on your local machine while you have it running inside of your terminal. We'll go through how to host it in the cloud in the next few weeks!* 
 
 ## Contributing
 
