@@ -1,3 +1,31 @@
+body {
+  padding-top: 80px;
+}
+
+#experience {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+#about {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+#projs {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+#experience, #projs, #about, #contact   {
+  height:100vh;
+}
+
+#resume-pdf {
+  text-decoration: underline;
+  color: #a1daec;
+}
+
 .max-width {
   padding: 20px 50px;
   background-color: #222629;
@@ -107,7 +135,7 @@ ul a:hover {
 .proj-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .proj-card {
