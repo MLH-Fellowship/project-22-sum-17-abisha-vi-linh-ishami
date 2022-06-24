@@ -21,9 +21,19 @@ body {
   height:100vh;
 }
 
-#resume-pdf {
+.resume {
   text-decoration: underline;
-  color: #a1daec;
+  border: none;
+  background-color: #db3304;
+  color: #fff;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 10px;
+}  
+
+.resume:hover {
+    cursor: pointer;
+    background-color: #f08663;
 }
 
 .max-width {
@@ -32,7 +42,7 @@ body {
 }
 
 * {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 h1 {
@@ -141,12 +151,14 @@ ul a:hover {
 .proj-card {
   color: #4f8495;
   display: flex;
-  padding: 10px;
-  justify-content: space-between;
+  padding: 5px;
+  justify-content: space-evenly;
 }
 
 .proj-card img {
   border-radius: 5%;
+  width: 230px;
+  height: 230px;
 }
 
 .proj-card .proj-descrip {
@@ -299,30 +311,32 @@ ul a:hover {
 /* Experience */
 
 .exp-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  padding-right: 300px;
+  padding-left: 300px;
+  gap: 2rem;
 }
 
 .exp-card {
   border-radius: 5px;
   background: rgb(79, 132, 149);
-  width: 30%;
   min-height: 100px;
   padding: 30px;
-  margin: 20px;
-  text-align: left;
   color: white;
+}
+
+#exp-cards a {
+  padding-left: 30%;
+  padding-right: 30%;
 }
 
 .exp-card ul {
   margin: 0;
-  padding: 0px 10px;
 }
 
 .exp-card h2 {
   margin: 0;
-  margin-bottom: 10px;
+  text-align: left;
 }
 
 /*Contact*/
@@ -370,3 +384,4 @@ textarea::placeholder {
   background-color: #a1daec;
   color: #000;
 }
+

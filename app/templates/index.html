@@ -36,7 +36,6 @@
       <a href="#experience"><li>Experience</li></a>
       <a href="#projs"><li>Projects</li></a>
       <a href="#about"><li>About Me</li></a>
-      <a href="#contact"><li>Contact</li></a>
     </ul>
   </nav>
 
@@ -62,7 +61,7 @@
             ><li><i class="fa-brands fa-github"></i></li
           ></a>
           <a href=""
-            ><li><i class="fa-brands fa-twitter"></i></li
+            ><li><i class="fa-solid fa-envelope"></i></li
           ></a>
         </ul>
       </div>
@@ -71,7 +70,7 @@
     <!--Experiences -->
     <div id="experience" class="experience">
       <h1>Experience</h1>
-      <a id="resume-pdf" href=".\static\img\software-engineer-resume-example.pdf" download="newfilename">Resume.pdf</a>
+      
       <div class="exp-cards">
         {% for exp in experiences %}
         <div class="exp-card">
@@ -83,6 +82,7 @@
           </ul>
         </div>
         {% endfor %}
+        <a class='resume' id="resume-pdf" href=".\static\img\software-engineer-resume-example.pdf" target="_blank">Resume.pdf</a>
       </div>
     </div>
 
@@ -144,22 +144,6 @@
         <p>Where I've Been</p>
         
       </div>
-    </div>
-
-    <!--Contact-->
-    <div id="contact" class="contact">
-      <h1>Contact</h1>
-      <form class="contact-form">
-        <input type="text" id="name" placeholder="Name" required />
-        <input type="email" id="email" placeholder="Email" required />
-        <textarea
-          id="message"
-          placeholder="Message"
-          required
-          rows="5"
-        ></textarea>
-        <button type="submit" className="contact-submit">submit</button>
-      </form>
     </div>
   </body>
 </html>

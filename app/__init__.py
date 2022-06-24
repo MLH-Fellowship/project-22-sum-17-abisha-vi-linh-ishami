@@ -51,8 +51,7 @@ def index():
     exps = [
         Exp("Experience 1", ["point 1", "point 2", "point 3"]),
         Exp("Experience 2", ["point 1", "point 2", "point 3"]),
-        Exp("Experience 3", ["point 1", "point 2", "point 3"]),
-        Exp("Experience 4", ["point 1", "point 2", "point 3"])
+        Exp("Experience 3", ["point 1", "point 2", "point 3"])
     ]
 
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), projects=projs, polaroids=pols, experiences=exps)
