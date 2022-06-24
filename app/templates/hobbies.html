@@ -20,17 +20,19 @@
 </head>
 
 <nav>
-  <ul class="nav-menu">
+  <ul id="nav-menu-2" class="nav-menu">
     <a href="{{ url_for('index') }}"><li>Home</li></a>
-    <a href=""><li>Experience</li></a>
-    <a href="{{ url_for('index') }}"><li>Projects</li></a>
-    <a href="{{ url_for('index') }}"><li>About Me</li></a>
-    <a href="{{ url_for('index') }}"><li>Contact</li></a>
   </ul>
 </nav>
 
 <body class="max-width">
-    <h1> Hobbies</h1>
+  <div class="hobbies-section">
+
+    <div class="journey-section">
+      <h1>~ My Journey ~</h1>
+    </div>
+
+    <p id="hobbies-title">My Hobbies</p>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for pol in polaroids %}
         <div class="polaroid">
@@ -49,6 +51,13 @@
           </a>
         </div>
         {% endfor %}
-      </div>
+    </div>
+
+    <div class="map">
+      <p>Where I've Been</p>
+      <img src="../static/img/Screenshot 2022-06-04 163820.png" />
+    </div>
+
+  </div>
 </body>
 </html>

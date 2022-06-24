@@ -35,7 +35,7 @@
       <a href=""><li>Home</li></a>
       <a href="#experience"><li>Experience</li></a>
       <a href="#projs"><li>Projects</li></a>
-      <a href="#about"><li>About Me</li></a>
+      <a href="#about"><li>About</li></a>
     </ul>
   </nav>
 
@@ -114,12 +114,12 @@
 
     <!--About Me Section-->
     <div id="about" class="about-section">
-      <h1>About Me</h1>
-      <p>My Interests: Blockchain, Machine Learning, DevOps</p>
+      <h1>About</h1>
+      <p>Currently finishing up a degree in Biology and Computer Science</p>
       <p>
-        My <a href="{{ url_for('hobbies') }}">Hobbies</a>: Swimming, Hiking,
-        Traveling
+        My hobbies include swimming, hiking, traveling
       </p>
+      <p>For more about me and my <a href="{{ url_for('hobbies') }}">JOURNEY</a></p>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for pol in polaroids %}
         <div class="polaroid">
@@ -139,11 +139,5 @@
         </div>
         {% endfor %}
       </div>
-      <div class="map">
-        <img src="../static/img/Screenshot 2022-06-04 163820.png" />
-        <p>Where I've Been</p>
-        
-      </div>
-    </div>
   </body>
 </html>
