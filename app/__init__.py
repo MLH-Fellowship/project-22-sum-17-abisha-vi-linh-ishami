@@ -28,7 +28,7 @@ class TimelinePost(Model):
         database = mydb
 
 mydb.connect()
-#mydb.create_tables([TimelinePost])
+mydb.create_tables([TimelinePost])
 
 class Proj:
     def __init__(self, name, descrip, git, demo) -> None:
