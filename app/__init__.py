@@ -4,17 +4,21 @@ from dotenv import load_dotenv
 from peewee import *
 import datetime
 from playhouse.shortcuts import model_to_dict 
+import re
 
 load_dotenv()
 app = Flask(__name__)
 
 #connect to MySQL db
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
-    user=os.getenv("MYSQL_USER"),
-    password=os.getenv("MYSQL_PASSWORD"),
-    host=os.getenv("MYSQL_HOST"),
-    port=3306
-)
+if os.getenv("TESTING") == "true":
+    print("Running in test mode")
+    mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
+else:
+    mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+        user=os.getenv("MYSQL_USER"),
+        password=os.getenv("MYSQL_PASSWORD"),
+        host=os.getenv("MYSQL_HOST"),
+        port=3306)
 
 print(mydb)
 
@@ -96,7 +100,29 @@ def timeline():
 # create db timeline_post
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
-    name = request.form['name']
+    name, content, email = None, None, None
+    try: 
+        name = request.form['name']
+        if name =="":
+            return "<html>Invalid name</html>", 400
+    except:
+        if not name:
+            return "<html>Invalid name</html>", 400
+    try:
+        email = request.form['email']
+        pat = "^[a-zA-Z0-9-_]+@[a-zA-Z0-9]+\.[a-z]{1,3}$"
+        if email == "" or not re.match(pat, email):
+            return "<html>Invalid email</html>", 400
+    except:
+        if not email:
+            return "<html>Invalid email</html>", 400
+    try:
+        content = request.form['content']
+        if content == "":
+            return "<html>Invalid content</html>", 400
+    except:
+        if not content:
+            return "<html>Invalid content</html>", 400
     email = request.form['email']
     content = request.form['content']
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
