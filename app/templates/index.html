@@ -49,22 +49,14 @@
           <span class="tag">Developer</span> | <span class="tag">Fellow</span> |
           <span class="tag">Student</span>
         </p>
+        <ul class="links">
+          <a href="https://github.com/"><li><i class="fa-brands fa-linkedin" style="font-size: 2em"></i></li>
+          </a><a href=""><li><i class="fa-brands fa-github" style="font-size: 2em"></i></li></a>
+          <a href=""><li><i class="fa-solid fa-envelope" style="font-size: 2em"></i></li></a>
+        </ul>
       </div>
       <div class="right">
-        <img
-          src="https://shotkit.com/wp-content/uploads/2020/07/woman-headshot-outdoors.jpg"
-        />
-        <ul class="links">
-          <a href="https://github.com/">
-            <li><i class="fa-brands fa-linkedin"></i></li>
-          </a>
-          <a href=""
-            ><li><i class="fa-brands fa-github"></i></li
-          ></a>
-          <a href=""
-            ><li><i class="fa-solid fa-envelope"></i></li
-          ></a>
-        </ul>
+        
       </div>
     </div>
 
@@ -87,40 +79,43 @@
       </div>
     </div>
 
-    <!--Project Section-->
-    <div id="projs" class="projs">
-      <h1>Projects</h1>
-      <div class="proj-cards">
-        {% for proj in projects %}
-        <div class="proj-card">
-          <div class="proj-left">
-            <h2>{{ proj.name }}</h2>
-            <p class="proj-descrip">{{ proj.descrip }}</p>
-          </div>
-          <div class="proj-right">
-            <img
-              src="https://i.pinimg.com/originals/2d/38/4a/2d384a99b7f36a636bb9ea81ba5d727f.jpg"
-              width="250"
-              height="250"
-            />
+    <!--Project Section
+          {% for proj in projects %}
             <div class="proj-buttons">
               <a href="{{ proj.git }}"><button>GitHub</button></a>
               <a href="{{ proj.demo }}"><button>Demo</button></a>
             </div>
-          </div>
-        </div>
+          {% endfor %}
+-->
+
+    <div id="projs" class="projs">
+      <h1>Projects</h1>
+      <ul class="proj-cards">
+        {% for proj in projects %}
+        <li>
+          <div href="" class="proj-card">
+            <img src="https://i.pinimg.com/originals/2d/38/4a/2d384a99b7f36a636bb9ea81ba5d727f.jpg" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <div class="card__header-text">
+                  <h3 class="card__title">{{ proj.name }}</h3>            
+                  <span class="card__status">Teck Stack: JS, html, CSS</span>
+                </div>
+              </div>
+              <p class="card__description">{{ proj.descrip }}</p>
+            </div>
+            
+          </div>      
+        </li>
         {% endfor %}
-      </div>
-    </div>
+      </ul>
 
     <!--About Me Section-->
     <div id="about" class="about-section">
       <h1>About</h1>
-      <p>Currently finishing up a degree in Biology and Computer Science</p>
-      <p>
-        My hobbies include swimming, hiking, traveling
-      </p>
-      <p>For more about me and my <a href="{{ url_for('hobbies') }}">JOURNEY</a></p>
+      <p>Hello, my name is Ishami Rulinda and I am a student at Queen's University 
+        working towards a bachelor in Computer Science and Biology</p>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for pol in polaroids %}
         <div class="polaroid">

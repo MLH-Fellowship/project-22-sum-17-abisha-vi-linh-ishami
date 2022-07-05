@@ -78,18 +78,11 @@ def index():
     ]
 
     pols = [
-        Polaroid("Caption of polaroid 1", "https://imagesvc.meredithcorp.io/v3/mm/image?q=60&c=sc&poi=%5B1936%2C1296%5D&w=3872&h=1936&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F35%2F2019%2F08%2F05144705%2FGettyImages-96709750-1.jpg"),
-        Polaroid("Caption of polaroid 2", ".\static\img\R.jpg"),
-        Polaroid("Caption of polaroid 3",
-                "https://www.success.com/wp-content/uploads/2016/09/therealreasontravelingmakesyouhappy.jpg")
+        Polaroid("Caption of polaroid 1", 
+        "https://imagesvc.meredithcorp.io/v3/mm/image?q=60&c=sc&poi=%5B1936%2C1296%5D&w=3872&h=1936&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F35%2F2019%2F08%2F05144705%2FGettyImages-96709750-1.jpg"),
     ]
 
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), projects=projs, polaroids=pols, experiences=exps)
-
-
-@app.route('/hobbies')
-def hobbies():
-    return render_template('hobbies.html', url=os.getenv("URL"), polaroids=pols)
 
 # create timeline post page
 @app.route('/timeline')
