@@ -79,15 +79,6 @@
       </div>
     </div>
 
-    <!--Project Section
-          {% for proj in projects %}
-            <div class="proj-buttons">
-              <a href="{{ proj.git }}"><button>GitHub</button></a>
-              <a href="{{ proj.demo }}"><button>Demo</button></a>
-            </div>
-          {% endfor %}
--->
-
     <div id="projs" class="projs">
       <h1>Projects</h1>
       <ul class="proj-cards">
@@ -104,6 +95,10 @@
                 </div>
               </div>
               <p class="card__description">{{ proj.descrip }}</p>
+              <div class="proj-buttons">
+                <a href="{{ proj.git }}"><button style="background-color: #a9e1a4;">GitHub</button></a>
+                <a href="{{ proj.demo }}"><button style="background-color: #5872d0;">Demo</button></a>
+              </div>
             </div>
             
           </div>      
@@ -114,9 +109,15 @@
     <!--About Me Section-->
     <div id="about" class="about-section">
       <h1>About</h1>
-      <p>Hello, my name is Ishami Rulinda and I am a student at Queen's University 
-        working towards a bachelor in Computer Science and Biology</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="about-text">
+        <p>
+          Hello, my name is Ishami Rulinda and I am a student at Queen's University 
+          working towards a bachelor in Computer Science and Biology. 
+          I have interests in machine learning, DevOps, and web & game development. 
+          I love learning and teaching myself old and new tools to build cool projects! 
+        </p>
+      </div>
+      <div class="row-cols-1">
         {% for pol in polaroids %}
         <div class="polaroid">
           <a

@@ -25,20 +25,27 @@
     </ul>
   </nav>
 
-<form id="form">
-    <input name="name" id="name" type="text">
-    <input name="email" id="email" type="text">
-    <input name="content" id="content" type="text">
-    <button type="submit">Submit</button>
-</form> 
-
-<div id="Timeline">
-    {% for post in posts %}
-        <p> {{post.name}} </p>
-        <p> {{post.email}} </p>
-        <p> {{post.content}} </p>
-    {% endfor %}
-</div>
+<body class="max-width">
+    <div class="timeline-page">
+        <h1>Timeline</h1>
+        <form id="form">
+            <input name="name" id="name" type="text" placeholder="Name" required>
+            <input name="email" id="email" type="text" placeholder="Email" required>
+            <textarea name="content" id="content" type="text" placeholder="Content" required></textarea>
+            <button type="submit">Submit</button>
+        </form> 
+        
+        <div id="Timeline">
+            {% for post in posts %}
+            <div class="timeline-post">
+                <p style="color: white;"> {{post.name}} </p>
+                <p style="color: #DCD6F7;"> {{post.email}} </p>
+                <p1 style="color: #434975;"> {{post.content}} </p1>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
 
 <script>
     const form = document.getElementById('form');

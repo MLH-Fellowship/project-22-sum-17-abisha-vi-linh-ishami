@@ -9,7 +9,7 @@ body {
 
 #about {
   margin-top: -80px;
-  padding-top: 80px;
+  padding-top: 150px;
 }
 
 #projs {
@@ -23,7 +23,7 @@ body {
 
 .max-width {
   padding: 20px 50px;
-  background-color: #222629;
+  background-color: #DCD6F7;
 }
 
 * {
@@ -41,14 +41,13 @@ a {
 }
 
 nav {
-  background-color: antiquewhite;
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   padding: 20px;
   padding-right: 30px;
-  background-color: #222629;
+  background-color: #DCD6F7;
   z-index: 999;
 }
 
@@ -71,12 +70,12 @@ ul {
 
 ul a {
   text-decoration: none;
-  color: #a1daec;
+  color: #434975;
   text-transform: uppercase;
 }
 
 ul a:hover {
-  color: #4f8495;
+  color: #A6B1E1;
 }
 
 .home {
@@ -101,7 +100,7 @@ ul a:hover {
 }
 
 .home .left .tag:hover {
-  color: #a1daec;
+  color: #A6B1E1;
   font-size: 110%;
   transition: 0.3s ease-out;
 }
@@ -138,6 +137,7 @@ ul a:hover {
 
 .experience h1{
   text-align: center;
+  color: #434975;
 }
 
 .exp-cards {
@@ -149,15 +149,15 @@ ul a:hover {
 
 .exp-card {
   border-radius: 20px;
-  background: rgb(79, 132, 149);
+  background: #F4EEFF;
   min-height: 100px;
   padding: 30px;
-  color: white;
+  color: #434975;
   box-shadow: #000;
 }
 
 .exp-card:hover {
-  background-color: #61aac5;
+  outline: #434975 solid 3px;
 }
 
 #exp-cards a {
@@ -167,6 +167,7 @@ ul a:hover {
 
 .exp-card ul {
   margin: 0;
+  color: #A6B1E1;
 }
 
 .exp-card h2 {
@@ -177,23 +178,27 @@ ul a:hover {
 .resume {
   text-decoration: underline;
   border: none;
-  background-color: #db3304;
-  color: #fff;
+  background-color: #FF9F9F;
+  color: #434975;
   padding: 5px 10px;
   text-align: center;
   border-radius: 10px;
   box-shadow: #000;
+  margin-left: 30%;
+  margin-right: 30%;
 }  
 
 .resume:hover {
     cursor: pointer;
-    background-color: #f08663;
+    color:#DCD6F7;
+    outline: #434975 solid 2px;
 }
 
 /* Projects Section */
 
 .projs h1{
   text-align: center;
+  color: #434975;
 }
 
 /* proj css test */
@@ -213,9 +218,13 @@ ul a:hover {
   position: relative;
   display: flex;
   height: 100%;  
-  border-radius: 15%;
+  border-radius: 10%;
   overflow: hidden;
   text-decoration: none;
+}
+
+.proj-card:hover {
+  outline: #434975 solid 2px;
 }
 
 .card__image {      
@@ -237,8 +246,8 @@ ul a:hover {
 
 .proj-card:hover .card__overlay {
   transform: translateY(0);
-  background-color: #cba5b9;
-  border-radius: 15%;
+  background-color: #A6B1E1;
+  border-radius: 10%;
 }
 
 .card__header {
@@ -247,10 +256,10 @@ ul a:hover {
   align-items: center;
   gap: 2em;
   padding: 2em;
-  border-radius: 15%;    
+  border-radius: 10%;    
   transform: translateY(-100%);
   transition: .2s ease-in-out;
-  background-color: #cba5b9;
+  background-color: #A6B1E1;
 }
 
 .card__arc {
@@ -269,26 +278,18 @@ ul a:hover {
 .card__title {
   font-size: 1em;
   margin: 0 0 .3em;
-  color: #6A515E;
-}
-
-.card__tagline {
-  display: block;
-  margin: 1em 0;
-  font-family: "MockFlowFont";  
-  font-size: .8em; 
-  color: #D7BDCA;  
+  color: #434975;
 }
 
 .card__status {
   font-size: .8em;
-  color: #D7BDCA;
+  color: white;
 }
 
 .card__description {
   padding: 0 2em 2em;
   margin: 0;
-  color: #D7BDCA;
+  color: #DCD6F7;
   font-family: "MockFlowFont";   
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -296,16 +297,15 @@ ul a:hover {
   overflow: hidden;
 } 
 
-/*
+
 .proj-buttons {
   display: flex;
   justify-content: center;
   gap: 5%;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .proj-buttons button {
-  background-color: #4f8495;
   color: #fff;
   border-radius: 5%;
   border-style: none;
@@ -317,20 +317,25 @@ ul a:hover {
   background-color: #a1daec;
   color: #000;
 }
-*/
+
 
 /* Styles for about-me-section */
 
 .about-section {
-  color: white;
+  color: #434975;
 }
 
-.about-section p {
+.about-text {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 3 1;
-  color: #a1daec;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.about-text p {
+  color: white;
 }
 
 .about-section p a {
@@ -344,6 +349,12 @@ ul a:hover {
   flex: 3 1;
 }
 
+.row-cols-1 {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+/* For more than 1 polaroid*/
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -365,11 +376,6 @@ ul a:hover {
 .row-cols-auto > * {
   flex: 0 0 auto;
   width: auto;
-}
-
-.row-cols-1 > * {
-  flex: 0 0 auto;
-  width: 100%;
 }
 
 .row-cols-sm-2 > * {
@@ -424,44 +430,36 @@ ul a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
-.map {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 50px;
-  color: #fff;
-}
+/* timeline section */
 
-.map h2 {
-  text-transform: uppercase;
-}
-
-.map img {
-  width: 60%;
-  margin: 10px;
-  border: #4f8495 6px solid;
-}
-
-.map img:hover {
-  width: 1.1;
-  opacity: 90%;
-}
-
-/* journey section */
-.journey-section {
-  padding-top: 800px;
+.timeline-page h1{
   text-align: center;
+  color: #434975;
 }
 
-.journey-section h1 {
-  color: #fff;
-  text-transform: uppercase;
+.timeline-page {
+  margin-top: -80px;
+  padding-top: 200px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
-#hobbies-title {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: #fff;
+.timeline-page form {
+  display: grid;
+  padding-left: 25%;
+  padding-right: 25%;
+  margin-bottom: 20px;
+  gap: 1rem;
+}
+
+.timeline-post {
+  background-color: #A6B1E1;
+  padding: 5px;
+  margin: 5px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.timeline-post p {
+  text-align: center;
 }
