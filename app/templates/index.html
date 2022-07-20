@@ -35,8 +35,8 @@
       <a href=""><li>Home</li></a>
       <a href="#experience"><li>Experience</li></a>
       <a href="#projs"><li>Projects</li></a>
-      <a href="#about"><li>About Me</li></a>
-      <a href="#contact"><li>Contact</li></a>
+      <a href="#about"><li>About</li></a>
+      <a href="{{ url_for('timeline') }}">TIMELINE</a>
     </ul>
   </nav>
 
@@ -44,34 +44,26 @@
     <!--Home Section-->
     <div class="home">
       <div class="left">
-        <h1>First Last</h1>
+        <h1>Ishami Rulinda</h1>
         <p>
           <span class="tag">Developer</span> | <span class="tag">Fellow</span> |
           <span class="tag">Student</span>
         </p>
+        <ul class="links">
+          <a href="https://github.com/"><li><i class="fa-brands fa-linkedin" style="font-size: 2em"></i></li>
+          </a><a href=""><li><i class="fa-brands fa-github" style="font-size: 2em"></i></li></a>
+          <a href=""><li><i class="fa-solid fa-envelope" style="font-size: 2em"></i></li></a>
+        </ul>
       </div>
       <div class="right">
-        <img
-          src="https://shotkit.com/wp-content/uploads/2020/07/woman-headshot-outdoors.jpg"
-        />
-        <ul class="links">
-          <a href="https://github.com/">
-            <li><i class="fa-brands fa-linkedin"></i></li>
-          </a>
-          <a href=""
-            ><li><i class="fa-brands fa-github"></i></li
-          ></a>
-          <a href=""
-            ><li><i class="fa-brands fa-twitter"></i></li
-          ></a>
-        </ul>
+        
       </div>
     </div>
 
     <!--Experiences -->
     <div id="experience" class="experience">
       <h1>Experience</h1>
-      <a id="resume-pdf" href=".\static\img\software-engineer-resume-example.pdf" download="newfilename">Resume.pdf</a>
+      
       <div class="exp-cards">
         {% for exp in experiences %}
         <div class="exp-card">
@@ -83,44 +75,49 @@
           </ul>
         </div>
         {% endfor %}
+        <a class='resume' id="resume-pdf" href=".\static\img\software-engineer-resume-example.pdf" target="_blank">resume.pdf</a>
       </div>
     </div>
 
-    <!--Project Section-->
     <div id="projs" class="projs">
       <h1>Projects</h1>
-      <div class="proj-cards">
+      <ul class="proj-cards">
         {% for proj in projects %}
-        <div class="proj-card">
-          <div class="proj-left">
-            <h2>{{ proj.name }}</h2>
-            <p class="proj-descrip">{{ proj.descrip }}</p>
-          </div>
-          <div class="proj-right">
-            <img
-              src="https://i.pinimg.com/originals/2d/38/4a/2d384a99b7f36a636bb9ea81ba5d727f.jpg"
-              width="250"
-              height="250"
-            />
-            <div class="proj-buttons">
-              <a href="{{ proj.git }}"><button>GitHub</button></a>
-              <a href="{{ proj.demo }}"><button>Demo</button></a>
+        <li>
+          <div href="" class="proj-card">
+            <img src="https://i.pinimg.com/originals/2d/38/4a/2d384a99b7f36a636bb9ea81ba5d727f.jpg" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <div class="card__header-text">
+                  <h3 class="card__title">{{ proj.name }}</h3>            
+                  <span class="card__status">Teck Stack: JS, html, CSS</span>
+                </div>
+              </div>
+              <p class="card__description">{{ proj.descrip }}</p>
+              <div class="proj-buttons">
+                <a href="{{ proj.git }}"><button style="background-color: #a9e1a4;">GitHub</button></a>
+                <a href="{{ proj.demo }}"><button style="background-color: #5872d0;">Demo</button></a>
+              </div>
             </div>
-          </div>
-        </div>
+            
+          </div>      
+        </li>
         {% endfor %}
-      </div>
-    </div>
+      </ul>
 
     <!--About Me Section-->
     <div id="about" class="about-section">
-      <h1>About Me</h1>
-      <p>My Interests: Blockchain, Machine Learning, DevOps</p>
-      <p>
-        My <a href="{{ url_for('hobbies') }}">Hobbies</a>: Swimming, Hiking,
-        Traveling
-      </p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <h1>About</h1>
+      <div class="about-text">
+        <p>
+          Hello, my name is Ishami Rulinda and I am a student at Queen's University 
+          working towards a bachelor in Computer Science and Biology. 
+          I have interests in machine learning, DevOps, and web & game development. 
+          I love learning and teaching myself old and new tools alike to build cool projects! 
+        </p>
+      </div>
+      <div class="row-cols-1">
         {% for pol in polaroids %}
         <div class="polaroid">
           <a
@@ -139,27 +136,5 @@
         </div>
         {% endfor %}
       </div>
-      <div class="map">
-        <img src="../static/img/Screenshot 2022-06-04 163820.png" />
-        <p>Where I've Been</p>
-        
-      </div>
-    </div>
-
-    <!--Contact-->
-    <div id="contact" class="contact">
-      <h1>Contact</h1>
-      <form class="contact-form">
-        <input type="text" id="name" placeholder="Name" required />
-        <input type="email" id="email" placeholder="Email" required />
-        <textarea
-          id="message"
-          placeholder="Message"
-          required
-          rows="5"
-        ></textarea>
-        <button type="submit" className="contact-submit">submit</button>
-      </form>
-    </div>
   </body>
 </html>

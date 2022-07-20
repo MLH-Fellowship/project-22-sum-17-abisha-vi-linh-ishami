@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Personal Portfolio">
+    <meta property="og:description" content="My Personal Portfolio">
+    <meta property="og:url" content="{{ url }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
+    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+    <title>{{ title }}</title>
+</head>
+
+<nav>
+    <ul id="nav-menu-2" class="nav-menu">
+      <a href="{{ url_for('index') }}"><li>Home</li></a>
+    </ul>
+  </nav>
+
+<body class="max-width">
+    <div class="timeline-page">
+        <h1>Timeline</h1>
+        <form id="form">
+            <input name="name" id="name" type="text" placeholder="Name" required>
+            <input name="email" id="email" type="text" placeholder="Email" required>
+            <textarea name="content" id="content" type="text" placeholder="Content" required></textarea>
+            <button type="submit">Submit</button>
+        </form> 
+        
+        <div id="Timeline">
+            {% for post in posts %}
+            <div class="timeline-post">
+                <p style="color: white;"> {{post.name}} </p>
+                <p style="color: #DCD6F7;"> {{post.email}} </p>
+                <p1 style="color: #434975;"> {{post.content}} </p1>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+<script>
+    const form = document.getElementById('form');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const payload = new FormData(form);
+
+        fetch('/api/timeline_post', {
+            method: "POST",
+            body: payload,
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                location.reload();
+                form.reset();
+            })
+            .catch(err => console.log(err));
+})
+</script>
